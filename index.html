@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<textarea id="text" rows="4" cols="50" placeholder="Enter your kWh"></textarea>
+
+    <h1>JavaScript Conditional Statements</h1>
+    <h2>Check kWh</h2>
+    <button class="btn" onclick="checkAge()">Check kWh</button>
+
+
+
+    <script>
+       
+        function checkAge() {
+           const kWh = parseInt(document.getElementById("text").value);
+            if (kWh <= 100) {
+                alert("You're a lifeline consumer");
+            } else if (kWh <=200) {
+                alert("You're a low consumer");
+            } else if (kWh <=300) {
+                alert("You're an average consumer");
+            } else if (kWh <=500) {
+                alert("You're a high consumer");
+            } else {
+                alert("You're a very high consumer");
+            }
+        }
+    </script>
+</body>
+</html>
