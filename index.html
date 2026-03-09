@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to bottom, #87CEEB, #98FB98);
-            padding: 20px;
-            min-height: 100vh;
-        }
-        h1 {
-            color: #FF4500;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        h2 {
-            color: #32CD32;
-        }
-        textarea {
-            display: block;
-            margin: 20px auto;
-            padding: 10px;
-            border: 2px solid #FF6347;
-            border-radius: 10px;
-            background-color: #FFFACD;
-        }
-        .btn {
-            background-color: #FF6347;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .btn:hover {
-            background-color: #FF4500;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kWh Checker</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+h2{
+    margin-top:0;
+    color:#555;
+}
+
+textarea{
+    width:220px;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    resize:none;
+    margin:15px 0;
+}
+
+.btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.btn:hover{
+    background:#43a047;
+}
+</style>
 </head>
+
 <body>
+
+<div class="container">
+
+<h1>JavaScript Conditional Statements</h1>
+<h2>Check kWh</h2>
 
 <textarea id="text" rows="4" cols="50" placeholder="Enter your kWh"></textarea>
 
-    <h1>JavaScript Conditional Statements</h1>
-    <h2>Check kWh</h2>
-    <button class="btn" onclick="checkKWh()">Check kWh</button>
+<button class="btn" onclick="checkKWh()">Check kWh</button>
 
+</div>
 
+<script>
 
-    <script>
-       
-        function checkKWh() {
-           const kWh = parseInt(document.getElementById("text").value);
-            if (kWh <= 100) {
-                alert("You're a lifeline consumer.");
-            } else if (kWh <=200) {
-                alert("You're a low consumer.");
-            } else if (kWh <=300) {
-                alert("You're an average consumer.");
-            } else if (kWh <=500) {
-                alert("You're a high consumer.");
-            } else {
-                alert("You're a very high consumer.");
-            }
-        }
-    </script>
+function checkKWh() {
+    const kWh = parseInt(document.getElementById("text").value);
+
+    if (kWh <= 100) {
+        alert("You're a lifeline consumer.");
+    } else if (kWh <=200) {
+        alert("You're a low consumer.");
+    } else if (kWh <=300) {
+        alert("You're an average consumer.");
+    } else if (kWh <=500) {
+        alert("You're a high consumer.");
+    } else {
+        alert("You're a very high consumer.");
+    }
+}
+
+</script>
 </body>
 </html>
